@@ -3,7 +3,7 @@ use actix_web::{http::header, middleware::Logger, routes, App, HttpServer};
 use dotenv::dotenv;
 use sqlx::{postgres::PgPoolOptions, Pool, Postgres};
 
-use crate::routes::health_route::health_check_handler;
+use soccer_meet_actix::routes::health_route::health_check_handler;
 
 struct AppState {
     db: Pool<Postgres>,

@@ -1,4 +1,5 @@
 use actix_web::{get, HttpResponse, Responder};
+use serde_json::json;
 
 #[get("/api/health_checker")]
 pub async fn health_check_handler() -> impl Responder {
