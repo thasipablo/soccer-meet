@@ -56,7 +56,7 @@ async fn main() -> std::io::Result<()> {
             .wrap(cors)
             .wrap(Logger::default())
     })
-    .bind("127.0.0.1:8080")?
+    .bind(&std::env::var("BASE_URL").expect("BASE_URL must be set"))?
     .run()
     .await;
 
