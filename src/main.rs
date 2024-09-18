@@ -1,12 +1,12 @@
 use actix_cors::Cors;
-use actix_web::{http::header, middleware::Logger, routes, App, HttpServer};
+use actix_web::{http::header, middleware::Logger, App, HttpServer};
 use dotenv::dotenv;
 use sqlx::{postgres::PgPoolOptions, Pool, Postgres};
 
 use soccer_meet_actix::routes::health_route::health_check_handler;
 
 struct AppState {
-    db: Pool<Postgres>,
+    _db: Pool<Postgres>,
 }
 
 fn config(cfg: &mut actix_web::web::ServiceConfig) {
